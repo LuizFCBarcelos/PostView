@@ -22,10 +22,11 @@ export default function PostDetails() {
       {post && (
         <Card>
           <CardContent>
-            <Typography variant="h5" gutterBottom>
-              {post.title}
-            </Typography>
-            <Typography variant="body1">{post.body}</Typography>
+            <Typography variant="h6">ID do Post: {post.id}</Typography>
+            <Typography variant="h6">ID do Usuário: {post.userId}</Typography>
+            <Typography variant="h5">Título: {post.title}</Typography>
+            <Typography variant="body1">Conteúdo: {post.body}</Typography>
+
           </CardContent>
         </Card>
       )}
