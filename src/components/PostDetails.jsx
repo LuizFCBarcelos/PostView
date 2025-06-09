@@ -14,14 +14,21 @@ export default function PostDetails() {
   }, [id])
 
   return (
-    <div>
-      <h1>Detalhes do Post {id}</h1>
+   <Container>
+      <Typography variant="h4" gutterBottom>
+        Detalhes do Post {id}
+      </Typography>
+
       {post && (
-        <div>
-          <h2>{post.title}</h2>
-          <p>{post.body}</p>
-        </div>
+        <Card>
+          <CardContent>
+            <Typography variant="h5" gutterBottom>
+              {post.title}
+            </Typography>
+            <Typography variant="body1">{post.body}</Typography>
+          </CardContent>
+        </Card>
       )}
-    </div>
+    </Container>
   )
 }
