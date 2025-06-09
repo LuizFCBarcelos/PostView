@@ -20,13 +20,21 @@ export default function Home() {
         </Typography>
 
         <Stack spacing={2} direction="column" alignItems="center">
-          <Button variant="contained" size="large" onClick={() => navigate('/post')}>
+            <Button variant="contained" size="large" onClick={() => navigate('/post')}>
             Ver Lista de Posts
-          </Button>
+            </Button>
 
-          <Button variant="outlined" size="large" onClick={() => navigate('/dados/1')}>
-            Ver Detalhes do Post 1
-          </Button>
+            <Button
+            variant="outlined"
+            size="large"
+            onClick={() => {
+                const randomId = Math.floor(Math.random() * 100) + 1
+                navigate(`/dados/${randomId}`)
+            }}
+            >
+            Ver detalhes de um post aleatório
+            </Button>
+
         </Stack>
       </Container>
     </Box>
