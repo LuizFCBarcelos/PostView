@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+
 import PostList from './components/PostList'
 import PostDetails from './components/PostDetails'
 import Home from './components/Home'
