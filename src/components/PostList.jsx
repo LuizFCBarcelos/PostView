@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { Container, Typography, Card, CardContent, Button } from '@mui/material'
 
 export default function PostList() {
   const [posts, setPosts] = useState([])
+  const navigate = useNavigate()
 
-    useEffect(() => {
+  useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then(response => response.json())
       .then(data => setPosts(data))
@@ -34,4 +37,3 @@ export default function PostList() {
     </Container>
   )
 }
-

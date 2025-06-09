@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-
+import { Container, Typography, Card, CardContent } from '@mui/material'
 
 export default function PostDetails() {
   const { id } = useParams()
   const [post, setPost] = useState(null)
 
-   useEffect(() => {
+  useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then(response => response.json())
       .then(data => setPost(data))
@@ -14,7 +14,7 @@ export default function PostDetails() {
   }, [id])
 
   return (
-   <Container>
+    <Container>
       <Typography variant="h4" gutterBottom>
         Detalhes do Post {id}
       </Typography>
